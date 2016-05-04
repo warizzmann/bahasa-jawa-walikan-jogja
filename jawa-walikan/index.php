@@ -11,7 +11,6 @@
 <?php
 # created by warizzmann
 # 2016
-
 if (isset($_GET['opo'])) {
     include 'walik.php';
     $opo = $_GET['opo'];
