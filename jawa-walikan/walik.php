@@ -27,6 +27,8 @@
     function diwalik($opo)
     {
         global $axara;
+        //strip spaces
+        $opo = str_replace(' ','',$opo);
         //separate the vowel from the consonant
         $consonant = njupuk_konsonan($opo);
         $vowel = njupuk_vokal($opo);
