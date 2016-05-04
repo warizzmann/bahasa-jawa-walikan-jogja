@@ -8,10 +8,6 @@
     </style>
 </head>
 <body>
-
-</body>
-</html>
-
 <?php
 # created by warizzmann
 # 2016
@@ -32,3 +28,5 @@ if (isset($_GET['opo'])) {
     <input type="text" name="opo">
     <span>*pisahkan tiap suku kata dengan koma (ex = da,ga,du)</span>
 </form>
+</body>
+</html>
