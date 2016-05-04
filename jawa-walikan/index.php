@@ -16,6 +16,7 @@ if (isset($_GET['opo'])) {
     include 'walik.php';
     $opo = $_GET['opo'];
     $opo_asli = str_replace(',','',$opo);
+    $opo_asli = str_replace(' ','',$opo_asli);
     $opo_array = explode(',',$opo);
     echo $opo_asli.' = ';
     foreach ($opo_array as $o) {
