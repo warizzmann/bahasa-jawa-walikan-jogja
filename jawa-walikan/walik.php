@@ -6,7 +6,8 @@
                     'h','n','c','r','k',
                     'd','t','s','w','l',
                     'p','dh','j','y','ny',
-                    'm','g','b','th','ng'
+                    'm','g','b','th','ng',
+                    ' '
                     );
 
     function njupuk_konsonan($opo){
@@ -28,7 +29,7 @@
     {
         global $axara;
         //strip spaces
-        $opo = str_replace(' ','',$opo);
+        // $opo = str_replace(' ','',$opo);
         //separate the vowel from the consonant
         $consonant = njupuk_konsonan($opo);
         $vowel = njupuk_vokal($opo);
@@ -36,7 +37,7 @@
         ////flip the syllable
         //get syllable position
         $position = array_search(strtolower($consonant), $axara);
-        //if the syllable position less than 11 (1-10)
+        //if the syllable position less than 9 (0-9)
         if ($position<11) {
             if ($position==10) {
                 $new_position = $position - 10;
@@ -45,9 +46,12 @@
                 $new_position = $position + 10;
             }
         }
-        //if the syllable position less than 11 (11-20)
-        elseif ($position>10) {
+        //if the syllable position less than 10 (10-19)
+        elseif ($position>10 && $position<20) {
             $new_position = $position - 10;
+        }
+        elseif ($position == 20) {
+            $new_position = $position;
         }
         // echo $position.'-';
         // echo $new_position;
